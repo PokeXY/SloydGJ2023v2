@@ -6,6 +6,11 @@ using System;
 public class Collect : MonoBehaviour
 {
     public static event Action OnCollected;
+    public static int total;
+
+    void Awake() => total++;
+ 
+
     void Update()
     {
         transform.localRotation = Quaternion.Euler(0, Time.time * 100f, 90f);
